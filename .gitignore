@@ -1,0 +1,9 @@
+*.suo
+bin/
+obj/
+csx/
+rxf/
+*.user
+.vs/
+logs/
+Backup/
