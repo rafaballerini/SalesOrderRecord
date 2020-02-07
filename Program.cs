@@ -109,7 +109,7 @@ Para sair perte [0]:
                 Console.Write(@"Para cadastrar outra Ordem de Venda aperte [1] 
 Para sair perte [0]: 
 ");
-                var decisao2 = Console.ReadLine();
+                decisao2 = Console.ReadLine();
                 // Sair
                 if (decisao2 == "0")
                 {
