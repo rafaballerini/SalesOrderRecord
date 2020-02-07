@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
-//Alteração
+//Alteração Zé
 namespace OrdemDeVenda
 {
     class Program
