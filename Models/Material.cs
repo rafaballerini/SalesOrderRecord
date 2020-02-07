@@ -40,7 +40,7 @@ namespace OrdemDeVenda.Models
 
             while (!codigoCorreto)
             {
-                Console.WriteLine("Informe o código do material: ");
+                Console.WriteLine("\nInforme o código do material: ");
                 codigo = Console.ReadLine();
                 if (string.IsNullOrEmpty(codigo?.Trim()))
                 {

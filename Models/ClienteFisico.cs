@@ -37,7 +37,7 @@ namespace OrdemDeVenda.Models
             {
                 Console.WriteLine("Informe o nome do cliente: ");
                 nome = Console.ReadLine();
-                if (string.IsNullOrEmpty(nome?.Trim()) || !(nome.Length > 100))
+                if (string.IsNullOrEmpty(nome?.Trim()) || (nome.Length > 100))
                 {
                     Console.WriteLine("Nome não pode ser vazio, nulo ou maior que 100 caracteres!");
                     nomeCorreto = false;

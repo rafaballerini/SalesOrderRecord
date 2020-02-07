@@ -9,12 +9,5 @@ namespace OrdemDeVenda.Models
         public string Telefone { get; set; }
         public string Endereco { get; set; }
         public string Email { get; set; }
-
-        //public Cliente(string telefone, string endereco, string email)
-        //{
-        //    Telefone = telefone;
-        //    Endereco = endereco;
-        //    Email = email;
-        //}
     }
 }

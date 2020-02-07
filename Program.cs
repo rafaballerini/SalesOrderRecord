@@ -1,6 +1,7 @@
 ﻿using OrdemDeVenda.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -77,15 +78,44 @@ namespace OrdemDeVenda
                 Console.WriteLine("\n\n");
 
                 //Volta para início
-                Console.Write(@"Para cadastrar outra Ordem de Venda aperte [1] " +
-                    "Para sair perte [0]: \n");
+                Console.Write(@"Para cadastrar outra Ordem de Venda aperte [1] 
+Para visualizar as quantidades de material aperte [2]
+Para sair perte [0]: 
+");
                 var decisao2 = Console.ReadLine();
+                // Sair
+                if (decisao2 == "0")
+                {
+                    a = false;
+                }
+                // Visualizar quantidade de material
+                else if (decisao2 == "2")
+                {
+                    Console.WriteLine("\nDigite o código do material que deseja: ");
+                    var codigomat = Console.ReadLine();
+
+                    // Material nulo
+                    var matCodigo2 = Materiais.Where(x => x.Codigo == codigomat).FirstOrDefault();
+                    if (matCodigo2 == null)
+                    {
+                        Console.WriteLine("Código duplicado");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Esse material possui {matCodigo2.Quantidade} peças cadastradas.\n");
+                    }
+                }
+                //Volta para início
+                Console.Write(@"Para cadastrar outra Ordem de Venda aperte [1] 
+Para sair perte [0]: 
+");
+                var decisao2 = Console.ReadLine();
+                // Sair
                 if (decisao2 == "0")
                 {
                     a = false;
                 }
             }
-            //Alteração Miguel
         }
     }
 }
