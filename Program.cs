@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
-//Alteração rafaellllllllllllllllla
+//>>>>>>> c44dd0cfa9ff9fd00b5cc627fadb4e1e26f7ef7e
 namespace OrdemDeVenda
 {
     class Program
