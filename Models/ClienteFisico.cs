@@ -37,9 +37,9 @@ namespace OrdemDeVenda.Models
             {
                 Console.WriteLine("Informe o nome do cliente: ");
                 nome = Console.ReadLine();
-                if (string.IsNullOrEmpty(nome?.Trim()))
+                if (string.IsNullOrEmpty(nome?.Trim()) || !(nome.Length > 100))
                 {
-                    Console.WriteLine("Nome não pode ser vazio ou nulo!");
+                    Console.WriteLine("Nome não pode ser vazio, nulo ou maior que 100 caracteres!");
                     nomeCorreto = false;
                 }
                 else
@@ -74,7 +74,7 @@ namespace OrdemDeVenda.Models
 
             while (!enderecoCorreto)
             {
-                Console.WriteLine("Informe o Endereço do cliente: ");
+                Console.WriteLine("Informe o endereço do cliente: ");
                 endereco = Console.ReadLine();
                 if (string.IsNullOrEmpty(endereco?.Trim()))
                 {
