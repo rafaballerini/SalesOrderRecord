@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
-//>>>>>>> c44dd0cfa9ff9fd00b5cc627fadb4e1e26f7ef7e
 namespace OrdemDeVenda
 {
     class Program
@@ -25,12 +24,11 @@ namespace OrdemDeVenda
                     // Cadastro de pessoa física
                     var cliente = ClienteFisico.SolicitaInfoCliente();
                     cliente.Cadastrar(ref listaClientes);
-                    listaClientes.Add(cliente);
                     // Cadastro de material
                     var material = Material.SolicitaInfoMaterial();
                     material.Cadastrar(ref Materiais);
-                    Materiais.Add(material);
                     //Email
+                    Thread.Sleep(3000);
                     Email novoEmail = new Email(cliente.Nome, material.Codigo, material.Descricao, material.Quantidade, material.Preco);
                     Console.WriteLine("\nEmail a ser enviado: ");
                     Console.Write(novoEmail.Corpo);
@@ -40,12 +38,11 @@ namespace OrdemDeVenda
                     // Cadastro de pessoa jurídica
                     var clientef = ClienteJuridico.SolicitaInfoCliente();
                     clientef.Cadastrar(ref ListaClientesJuridicos);
-                    ListaClientesJuridicos.Add(clientef);
                     // Cadastro de material
                     var material = Material.SolicitaInfoMaterial();
                     material.Cadastrar(ref Materiais);
-                    Materiais.Add(material);
                     //Email
+                    Thread.Sleep(3000);
                     Email novoEmail = new Email(clientef.RazaoSocial, material.Codigo, material.Descricao, material.Quantidade, material.Preco);
                     Console.WriteLine("\nEmail a ser enviado: ");
                     Console.Write(novoEmail.Corpo);

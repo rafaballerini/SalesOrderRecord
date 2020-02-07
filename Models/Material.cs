@@ -66,6 +66,7 @@ namespace OrdemDeVenda.Models
 
             while (!pesoCorreto)
             {
+                bool aux = true;
                 Console.WriteLine("Informe o peso do material: ");
                 var peso2 = Console.ReadLine();
                 try
@@ -76,12 +77,17 @@ namespace OrdemDeVenda.Models
                 {
                     Console.WriteLine("Peso deve ser um número válido!");
                     pesoCorreto = false;
+                    aux = false;
                 }
+                if (aux)
+                {
                     pesoCorreto = true;
+                }
             }
 
             while (!precoCorreto)
             {
+                bool aux = true;
                 Console.WriteLine("Informe o preço do material: ");
                 var preco1 = Console.ReadLine();
                 preco1 = preco1.Replace(".", ",");
@@ -93,12 +99,17 @@ namespace OrdemDeVenda.Models
                 {
                     Console.WriteLine("Preço deve ser um número válido!");
                     precoCorreto = false;
+                    aux = false;
                 }
-                precoCorreto = true;
+                if (aux)
+                {
+                    precoCorreto = true;
+                }
             }
 
             while (!quantidadeCorreta)
             {
+                bool aux = true;
                 Console.WriteLine("Informe a quantidade do material: ");
                 var quantidade2 = Console.ReadLine();
                 try
@@ -109,8 +120,12 @@ namespace OrdemDeVenda.Models
                 {
                     Console.WriteLine("Quantidade deve ser um número válido!");
                     quantidadeCorreta = false;
+                    aux = false;
                 }
-                quantidadeCorreta = true;
+                if (aux)
+                {
+                    quantidadeCorreta = true;
+                }
             }
             return new Material(codigo, descricao, peso, preco, quantidade);
         }
