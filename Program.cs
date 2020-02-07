@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
+//Alteração
 namespace OrdemDeVenda
 {
     class Program
